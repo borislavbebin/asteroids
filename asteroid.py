@@ -1,4 +1,4 @@
-import pygames
+import pygame
 from circleshape import *
 
 class Asteroid(CircleShape):
@@ -6,7 +6,7 @@ class Asteroid(CircleShape):
         super().__init__(x, y, radius)
 
     def draw(self, screen):
-        pygame.draw.polygon(screen, "white", self.position, self.radius, 2)
+        pygame.draw.circle(screen, "white", self.position, self.radius, 2)
 
     def update(self, dt):
         self.position += self.velocity * dt
